@@ -1,22 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
-function App() {
+function App({titulo}) {
+  const [state, setState]= useState('state'); //exemplo
+  const [idade, setIdade] = useState(21);
+  const [peso, setPeso] = useState(20);
+  const [numeroExibido, setNumeroExibido] = useState(0);
+  
+
+  //JAVASCRIPT FUNCTIONS !! PESQUISAR
+  
+  //Forma 1
+  const handleClick = () => {
+    //action
+    console.log("handleClick ativado");
+    setNumeroExibido(numeroExibido + 1);
+  }
+
+  //Forma 2
+  function handleClick2(){
+    //action
+    console.log("handleClick2 ativado");
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {titulo}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {numeroExibido}
+        <button onClick={handleClick} >Oi sou um botão</button>
       </header>
     </div>
   );
