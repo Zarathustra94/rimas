@@ -1,11 +1,14 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MeuNome from './MeuNome'; // Importe o componente MeuNome
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <MeuNome /> {/* Adicione o componente MeuNome aqui */}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
